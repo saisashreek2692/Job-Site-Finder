@@ -1,4 +1,12 @@
 import { FiClock } from "react-icons/fi";
+import img1 from "../../Assets/logos/logo-1.svg";
+import img2 from "../../Assets/logos/logo-2.svg";
+import img3 from "../../Assets/logos/logo-3.svg";
+import img4 from "../../Assets/logos/logo-4.svg";
+import img5 from "../../Assets/logos/logo-5.svg";
+import img6 from "../../Assets/logos/logo-6.svg";
+import img7 from "../../Assets/logos/logo-7.svg";
+import img8 from "../../Assets/logos/logo-8.svg";
 
 const Data = [
   {
@@ -8,6 +16,7 @@ const Data = [
     location: "Canada",
     desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit Asperiores, illum quis repellat laboriosam",
     company: "Company Name",
+    img: img1
   },
   {
     id: 2,
@@ -16,6 +25,7 @@ const Data = [
     location: "Ireland",
     desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit Asperiores, illum quis repellat laboriosam",
     company: "Company Name",
+    img: img2
   },
   {
     id: 3,
@@ -24,6 +34,7 @@ const Data = [
     location: "Australia",
     desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit Asperiores, illum quis repellat laboriosam",
     company: "Company Name",
+    img: img3
   },
   {
     id: 4,
@@ -32,6 +43,7 @@ const Data = [
     location: "India",
     desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit Asperiores, illum quis repellat laboriosam",
     company: "Company Name",
+    img: img4
   },
   {
     id: 5,
@@ -40,6 +52,7 @@ const Data = [
     location: "USA",
     desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit Asperiores, illum quis repellat laboriosam",
     company: "Company Name",
+    img: img5
   },
   {
     id: 6,
@@ -48,6 +61,7 @@ const Data = [
     location: "Australia",
     desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit Asperiores, illum quis repellat laboriosam",
     company: "Company Name",
+    img: img6
   },
   {
     id: 7,
@@ -56,6 +70,7 @@ const Data = [
     location: "India",
     desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit Asperiores, illum quis repellat laboriosam",
     company: "Company Name",
+    img: img7
   },
   {
     id: 8,
@@ -64,6 +79,7 @@ const Data = [
     location: "USA",
     desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit Asperiores, illum quis repellat laboriosam",
     company: "Company Name",
+    img: img8
   },
 ];
 
@@ -71,7 +87,7 @@ const Jobs = () => {
   return (
     <div>
       <div className="jobContainer flex gap-10 justify-center flex-wrap items-center py-10">
-        {Data.map(({ id, title, time, location, desc, company }) => {
+        {Data.map(({ id, title, time, location, desc, company, img }) => {
           return (
             <div key={id} className="group group/item singleJob w-[250px] p-[20px] bg-white rounded-[10px] hover:bg-blueColor shadow-lg shadow-greyIsh-400/700 hover:shadow-lg">
               <span className="flex justify-between items-center gap-4">
@@ -87,6 +103,7 @@ const Jobs = () => {
                 {desc}
               </p>
               <div className="company flex items-center gap-2">
+                <img src={img} alt={company} className="w-[10%]" />
                 <span className="text-[14px] py-[1rem] block group-hover:text-white">
                   {company}
                 </span>
